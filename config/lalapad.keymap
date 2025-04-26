@@ -42,12 +42,10 @@
 };
 
 &glidepoint_listener_L {
-    /* 左トラックパッドは常時スクロール動作に */
-   input-processors = <
-        &zip_xy_to_scroll_mapper,
-        &zip_scroll_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT),
-        &zip_scroll_scaler 1 6
-    >;
+   input-processors = 
+            <&zip_xy_to_scroll_mapper>,
+            <&zip_scroll_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_Y_INVERT)>,
+            <&zip_scroll_scaler 1 8>;
 };
 / {
 
