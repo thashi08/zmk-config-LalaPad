@@ -79,7 +79,7 @@
 pls_equal_jis: pls_equal_jis {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
-    indings = <&kp MINUS &kp EQUAL>; // ハイフンとイコール
+    bindings = <&kp MINUS &kp EQUAL>; // ハイフンとイコール
     mods = <(MOD_LSFT|MOD_RSFT)>; // Shiftを見て切り替える
     label = "PLS_EQUAL_JIS";
 };
