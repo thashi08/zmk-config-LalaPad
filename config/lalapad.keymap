@@ -178,6 +178,10 @@
 &kp LSHFT  &kp Z         &kp X         &kp C      &kp V        &kp B  &kp N      &kp M    &kp COMMA  &kp PERIOD  &mt2 UP SLASH   &kp JP_YEN
 &kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &kp SPACE  &mo SECONDARY_LAYER &lt TERTIARY_LAYER LANG2 &lt SYSTEM_LAYER LANG1 &kp BACKSPACE &kp RET &kp LEFT &kp DOWN &kp RIGHT
                          &allow_end &allow_pagedown &allow_home &allow_pageup    &allow_pageup &allow_home &allow_pagedown &allow_end
+            >;
+        };
+
+        SECONDARY_LAYER {
             display-name = "secondary_layer";
             sensor-bindings = <&scroll_left_right>,<&scroll_left_right>;
             bindings = <
