@@ -96,13 +96,12 @@
         mt_minus_plus_jis: mt_minus_plus_jis {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor           = "tap-preferred";
-            tapping-term-ms  = <200>;
-            quick-tap-ms     = <200>;
-            require-prior-idle-ms = <125>;
-            bindings = 
-                <&kp MINUS>,    /* タップで「-」 */
-                <&pls_plus_jis>; /* 長押しで「+」、Shiftで「=」 */
+            flavor               = "tap-preferred";
+            tapping-term-ms      = <200>;
+            quick-tap-ms         = <200>;
+            require-prior-idle-ms= <125>;
+            /* 一つの <> の中に、タップ用 phandle とホールド用 phandle を並べる */
+            bindings = <&kp MINUS &pls_plus_jis>;
         };
 
         // Encoder to Mouse Scroll
