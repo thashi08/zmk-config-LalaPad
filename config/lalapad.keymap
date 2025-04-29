@@ -79,7 +79,7 @@
 pls_equal_jis: pls_equal_jis {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
-    bindings = <&kp MINUS>, <&kp EQUAL>; // ハイフンとイコール
+    indings = <&kp MINUS &kp EQUAL>; // ハイフンとイコール
     mods = <(MOD_LSFT|MOD_RSFT)>; // Shiftを見て切り替える
     label = "PLS_EQUAL_JIS";
 };
@@ -87,7 +87,7 @@ pls_equal_jis: pls_equal_jis {
 pls_plus_jis: pls_plus_jis {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
-    bindings = <&kp SEMI>, <&kp SEMI>; // セミコロンを押しながらShiftで「＋」出す
+    bindings = <&kp SEMI &kp SEMI>; // セミコロンを押しながらShiftで「＋」出す
     mods = <(MOD_LSFT|MOD_RSFT)>; // Shiftが押されたら+に見える（日本語OS側で）
     label = "PLS_PLUS_JIS";
 };
@@ -98,7 +98,7 @@ mt_minus_plus_jis: mt_minus_plus_jis {
     flavor = "tap-preferred";
     tapping-term-ms = <200>;
     quick-tap-ms = <200>;
-    bindings = <&kp MINUS>, <&pls_plus_jis>;
+    bindings = <&kp MINUS &pls_plus_jis>;
 };
 
         // Encoder to Mouse Scroll
