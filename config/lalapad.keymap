@@ -101,8 +101,7 @@
             quick-tap-ms         = <200>;
             require-prior-idle-ms= <125>;
             /* 一つの <> の中に、タップ用 phandle とホールド用 phandle を並べる */
-            bindings = <&kp MINUS>,      /* 1st cell: タップで「-」 */
-            <&pls_plus_jis>;  /* 2nd cell: 長押しで「+」（Shiftで「=」） */
+            bindings = <&kp MINUS &pls_plus_jis>;
         };
 
         // Encoder to Mouse Scroll
